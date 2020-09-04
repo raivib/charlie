@@ -17,6 +17,9 @@ public class CouponRestController {
     @Autowired
     CouponRepository couponRepository;
 
+    /*
+    GET method to get the output of all the coupons which was stored through POST
+     */
     @RequestMapping(value = "/coupons/",method = RequestMethod.GET)
     public List<Coupons>getCoupons(){
         return couponRepository.findAll();
@@ -28,7 +31,9 @@ public class CouponRestController {
     }
 
 
-
+/*
+POST and PUT to create and update coupons
+ */
     @RequestMapping(value = "/coupons/",method = RequestMethod.POST)
     public Coupons createCoupons(Coupons coupons){
         return couponRepository.save(coupons);
@@ -39,7 +44,9 @@ public class CouponRestController {
         return couponRepository.save(coupons);
     }
 
-
+/*
+DELETE method to delete the coupons
+ */
     @RequestMapping(value = "/coupons/{id}",method = RequestMethod.DELETE)
     public void deleteCoupons(@PathVariable("id") int id){
         couponRepository.deleteById(id);

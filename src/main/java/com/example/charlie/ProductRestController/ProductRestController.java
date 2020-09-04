@@ -16,7 +16,9 @@ public class ProductRestController {
 
     @Autowired
     ProductRepository repository;
-
+/*
+Get all the data stored through POST Method
+ */
 
     @RequestMapping(value="/products/",method = RequestMethod.GET)
     public List<Products>getProducts(){
@@ -30,6 +32,9 @@ public class ProductRestController {
     }
 
 
+/*
+Create and update new products data
+ */
 
     @RequestMapping(value = "/products/",method = RequestMethod.POST)
     public Products createProduct(Products product){
@@ -41,6 +46,9 @@ public class ProductRestController {
         return repository.save(product);
     }
 
+    /*
+    Delete data in products through its ID.
+     */
     @RequestMapping(value = "/products/{id}",method = RequestMethod.DELETE)
     public void deleteProduct(@PathVariable("id") int id){
         repository.deleteById(id);

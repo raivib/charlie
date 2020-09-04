@@ -1,0 +1,17 @@
+
+INSERT INTO COUPONS
+values(5,'50OFF');
+INSERT INTO COUPONS
+values(6,'25OFF');
+INSERT INTO COUPONS
+values(7,'15OFF');
+
+
+INSERT INTO PRODUCTS
+values(1,5,'Pencil','PNC');
+INSERT INTO PRODUCTS
+values(2,50,'Pen','PEN');
+INSERT INTO PRODUCTS
+values(3,20,'Ink','INK');
+INSERT INTO PRODUCTS
+values(4,50,'Notebook','NTB');

@@ -1,5 +1,8 @@
 package com.example.charlie.entities;
 
+/*
+Database defining methods for Products
+ */
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

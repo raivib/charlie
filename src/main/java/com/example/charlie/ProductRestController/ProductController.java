@@ -15,7 +15,9 @@ public class ProductController {
 
     @Autowired
     ProductRepository repository;
-
+/*
+Get data through productCode
+ */
 
     @RequestMapping(value="/products/NTB",method = RequestMethod.GET)
     public Optional<Products> getNTB(){

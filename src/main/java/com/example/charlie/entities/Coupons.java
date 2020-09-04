@@ -8,6 +8,10 @@ import javax.persistence.Id;
 @Entity
 public class Coupons {
 
+    /*
+    Database defining parameters for coupons
+     */
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
