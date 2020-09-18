@@ -3,6 +3,8 @@ package com.example.charlie.ProductRestController;
 
 import com.example.charlie.entities.Products;
 import com.example.charlie.repos.ProductRepository;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,6 +18,8 @@ public class ProductRestController {
 
     @Autowired
     ProductRepository repository;
+
+    private static final Logger LOGGER= LoggerFactory.getLogger(ProductRestController.class);
 /*
 Get all the data stored through POST Method
  */
@@ -27,9 +31,13 @@ Get all the data stored through POST Method
 
 
     @RequestMapping(value = "/products/{id}",method = RequestMethod.GET)
+
     public Products getProduct(@PathVariable("id") int id){
+        LOGGER.info("Finding product by id:" +id);
         return repository.findById(id).get();
     }
+
+
 
 
 /*

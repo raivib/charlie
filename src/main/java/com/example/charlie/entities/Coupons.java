@@ -13,7 +13,7 @@ public class Coupons {
      */
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    //@GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     private String couponCode;
 
